@@ -35,6 +35,14 @@ const play = (num) => {
 }
 
 const winChecker = () => {
-
+    lines.forEach((line, index) => {
+        const [a, b, c] = line;
+        if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+            window.alert(`${board[a]} is the winner!`)
+        }
+    })
+    if (!board.includes(null)) {
+        window.alert("Cat's game...meow?")
+    }
 }
 
